@@ -1,6 +1,6 @@
 class AncestriesController < ApplicationController
   def index
-    @ancestries = Ancestries.all
+    @ancestries = Ancestry.all
   end
 
   # def show
