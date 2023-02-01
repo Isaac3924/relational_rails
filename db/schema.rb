@@ -15,6 +15,17 @@ ActiveRecord::Schema.define(version: 2023_01_30_222814) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "ancestries", force: :cascade do |t|
+    t.bigint "nation_id"
+    t.boolean "darkvision"
+    t.integer "population"
+    t.string "name"
+    t.string "patron_deity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["nation_id"], name: "index_ancestries_on_nation_id"
+  end
+
   create_table "nations", force: :cascade do |t|
     t.boolean "landlocked"
     t.integer "population"
@@ -24,16 +35,5 @@ ActiveRecord::Schema.define(version: 2023_01_30_222814) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "species", force: :cascade do |t|
-    t.bigint "nation_id"
-    t.boolean "darkvision"
-    t.integer "population"
-    t.string "name"
-    t.string "patron_deity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["nation_id"], name: "index_species_on_nation_id"
-  end
-
-  add_foreign_key "species", "nations"
+  add_foreign_key "ancestries", "nations"
 end

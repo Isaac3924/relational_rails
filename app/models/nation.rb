@@ -1,3 +1,3 @@
 class Nation < ApplicationRecord
-  has_many :species
+  has_many :ancestries
 end

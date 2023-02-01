@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-02-01T08:58:31-07:00">2023-02-01T08:58:31-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-02-01T14:40:26-07:00">2023-02-01T14:40:26-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  98.21%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.02
+         1.05
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>20</b> files in total.
+    <b>19</b> files in total.
   </div>
 
   <div class="t-line-summary">
     <b>56</b> relevant lines,
-    <span class="green"><b>56</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <span class="green"><b>55</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  98.21%
 </span>
 )
   </div>
@@ -82,13 +82,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#6ee47f32c971c120b1a7b39a8b6fc8f815747089" class="src_link" title="app/controllers/species_controller.rb">app/controllers/species_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="strong t-file__name"><a href="#60a0e7c74a43ec95189ada7e824030415256025f" class="src_link" title="app/controllers/nations_controller.rb">app/controllers/nations_controller.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">80.00 %</td>
             <td class="cell--number">9</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1.40</td>
             
           </tr>
         
@@ -116,17 +116,6 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#425a1a18bb55a23fe8c94e9523e69321a2ae5102" class="src_link" title="app/models/nation.rb">app/models/nation.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#147db79a96a95df5b3913a57f663135bdc39c926" class="src_link" title="app/models/species.rb">app/models/species.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">3</td>
             <td class="cell--number">2</td>
@@ -360,12 +349,12 @@
 </div>
 
       
-        <div class="source_table" id="6ee47f32c971c120b1a7b39a8b6fc8f815747089">
+        <div class="source_table" id="60a0e7c74a43ec95189ada7e824030415256025f">
   <div class="header">
-    <h3>app/controllers/species_controller.rb</h3>
+    <h3>app/controllers/nations_controller.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="red">
+  80.0%
 </span>
 
       lines covered
@@ -374,9 +363,9 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>5</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -393,7 +382,7 @@
 
             
 
-            <code class="ruby">class SpeciesController &lt; ApplicationController</code>
+            <code class="ruby">class NationsController &lt; ApplicationController</code>
           </li>
         </div>
       
@@ -404,18 +393,18 @@
 
             
 
-            <code class="ruby">    def index</code>
+            <code class="ruby">  def index</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="3">
+            
             
 
             
 
-            <code class="ruby">      @species = Species.all</code>
+            <code class="ruby">    @nations = Nation.all</code>
           </li>
         </div>
       
@@ -426,7 +415,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -437,29 +426,29 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # def show</code>
+            
+
+            <code class="ruby">  def show</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="4" data-linenumber="7">
+            <span class="hits">4</span>
             
 
-            <code class="ruby">    #   @species_singular = Nation.find(params[:id])</code>
+            
+
+            <code class="ruby">    @nation = Nation.find(params[:id])</code>
           </li>
         </div>
       
@@ -470,7 +459,7 @@
 
             
 
-            <code class="ruby">    # end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -481,7 +470,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -651,71 +640,7 @@
 
             
 
-            <code class="ruby">  has_many :species</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="147db79a96a95df5b3913a57f663135bdc39c926">
-  <div class="header">
-    <h3>app/models/species.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>2</b> relevant lines.
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class Species &lt; ApplicationRecord</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  belongs_to :nation</code>
+            <code class="ruby">  has_many :ancestries</code>
           </li>
         </div>
       
@@ -3272,7 +3197,7 @@
 
             
 
-            <code class="ruby">  get &#39;/species&#39;, to: &#39;species#index&#39;</code>
+            <code class="ruby">  get &#39;/ancestries&#39;, to: &#39;ancestries#index&#39;</code>
           </li>
         </div>
       
