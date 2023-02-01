@@ -246,6 +246,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -269,15 +270,22 @@
           null
         ]
       },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nations_controller.rb": {
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/models/species.rb": {
         "lines": [
           1,
           1,
-          0,
-          null,
-          null,
+          null
+        ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/species_controller.rb": {
+        "lines": [
           1,
-          4,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -289,6 +297,6 @@
         ]
       }
     },
-    "timestamp": 1675231238
+    "timestamp": 1675267111
   }
 }

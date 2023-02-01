@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get '/nations', to: 'nations#index'
   get '/nations/:id', to: 'nations#show'
+  get '/species', to: 'species#index'
 end
