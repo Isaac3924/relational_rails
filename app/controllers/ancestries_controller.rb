@@ -3,7 +3,7 @@ class AncestriesController < ApplicationController
     @ancestries = Ancestry.all
   end
 
-  # def show
-  #   @ancestry = Nation.find(params[:id])
-  # end
+  def show
+    @ancestry = Ancestry.find(params[:id])
+  end
 end
