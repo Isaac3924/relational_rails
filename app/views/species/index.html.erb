@@ -1,0 +1,11 @@
+<h1>Species</h1>
+<% @species.each do |singular| %>
+  <h3><%= singular.name %></h3>
+  <p>ID: <%= singular.id %></p>
+  <p>Darkvision: <%= singular.darkvision %></p>
+  <p>Population: <%= singular.population %></p>
+  <p>Patron Deity: <%= singular.patron_deity %></p>
+  <p>Nation ID:<%= singular.nation_id %></p>
+  <p>Created at: <%= @singular.created_at %></p>
+  <p>Updated at: <%= @singular.updated_at %></p>
+<% end %>
