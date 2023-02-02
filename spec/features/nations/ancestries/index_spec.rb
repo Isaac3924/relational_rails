@@ -14,6 +14,7 @@ RSpec.describe 'Nations ancestries index' do
 
     expect(page).to have_content(@ancestry.name)
     expect(page).to have_content(@ancestry2.name)
+    expect(page).to_not have_content(@ancestry3.name)
   end
 
   it 'displays the ancestries ID' do
@@ -21,6 +22,7 @@ RSpec.describe 'Nations ancestries index' do
 
     expect(page).to have_content(@ancestry.id)
     expect(page).to have_content(@ancestry2.id)
+    expect(page).to_not have_content(@ancestry3.id)
   end
 
   it 'displays the ancestries darkvision boolean' do
@@ -35,6 +37,7 @@ RSpec.describe 'Nations ancestries index' do
 
     expect(page).to have_content(@ancestry.population)
     expect(page).to have_content(@ancestry2.population)
+    expect(page).to_not have_content(@ancestry3.population)
   end
 
   it 'displays the ancestries patron deity' do
@@ -42,6 +45,7 @@ RSpec.describe 'Nations ancestries index' do
 
     expect(page).to have_content(@ancestry.patron_deity)
     expect(page).to have_content(@ancestry2.patron_deity)
+    expect(page).to_not have_content(@ancestry3.patron_deity)
   end
 
   it 'displays the ancestries nation ID' do
@@ -49,5 +53,6 @@ RSpec.describe 'Nations ancestries index' do
     save_and_open_page
     expect(page).to have_content(@ancestry.nation_id)
     expect(page).to have_content(@ancestry2.nation_id)
+    expect(page).to_not have_content(@ancestry3.nation_id)
   end
 end

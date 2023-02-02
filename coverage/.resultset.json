@@ -272,15 +272,19 @@
           null
         ]
       },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nations_controller.rb": {
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/models/ancestry.rb": {
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nation_ancestries_controller.rb": {
+        "lines": [
           1,
-          null,
-          null,
           1,
-          0,
+          6,
+          6,
           null,
           null
         ]
@@ -292,6 +296,6 @@
         ]
       }
     },
-    "timestamp": 1675368532
+    "timestamp": 1675369031
   }
 }

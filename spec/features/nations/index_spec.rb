@@ -10,4 +10,6 @@ RSpec.describe 'Nations index' do
     expect(page).to have_content(nation.name)
     expect(page).to have_content(nation2.name)
   end
+
+  
 end
