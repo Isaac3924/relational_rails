@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/nations/:id', to: 'nations#show'
   get '/ancestries', to: 'ancestries#index'
   get '/ancestries/:id', to: 'ancestries#show'
+  get '/nations/:nation_id/ancestries', to: 'nation_ancestries#index'
 end
