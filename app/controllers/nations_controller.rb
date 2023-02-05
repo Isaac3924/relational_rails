@@ -1,6 +1,7 @@
 class NationsController < ApplicationController
   def index
     @nations = Nation.all
+    @nations.order(created_at: :asc)
   end
 
   def show
