@@ -6,5 +6,6 @@ class NationsController < ApplicationController
 
   def show
     @nation = Nation.find(params[:id])
+    @ancestries_count = @nation.ancestries.count
   end
 end
