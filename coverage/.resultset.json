@@ -249,10 +249,36 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
       "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nations_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
@@ -271,59 +297,8 @@
           1,
           null
         ]
-      },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nations_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          8,
-          8,
-          null,
-          null
-        ]
-      },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/models/ancestry.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/ancestries_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nation_ancestries_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1675636208
+    "timestamp": 1675640335
   }
 }

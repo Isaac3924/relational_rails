@@ -8,4 +8,8 @@ class NationsController < ApplicationController
     @nation = Nation.find(params[:id])
     @ancestries_count = @nation.ancestries.count
   end
+
+  def new
+    @nations = Nation.all
+  end
 end
