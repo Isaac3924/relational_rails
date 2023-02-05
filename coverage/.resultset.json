@@ -276,12 +276,12 @@
         "lines": [
           1,
           1,
-          2,
-          2,
+          0,
+          0,
           null,
           null,
           1,
-          0,
+          5,
           null,
           null
         ]
@@ -291,8 +291,15 @@
           1,
           null
         ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/models/ancestry.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1675563233
+    "timestamp": 1675565136
   }
 }

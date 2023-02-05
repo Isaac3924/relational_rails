@@ -32,8 +32,20 @@ RSpec.describe 'the nations show page' do
     nation = Nation.create!(name: "Gahlland", landlocked: false, population: 324, national_language: "Gahlish")
     nation2 = Nation.create!(name: "Bjornsval", landlocked: false, population: 212, national_language: "Bjornish")
     visit "/nations/#{nation.id}"
-    save_and_open_page
+    
     expect(page).to have_content(nation.national_language)
     expect(page).to_not have_content(nation2.national_language)
+  end
+
+  it 'displays a count of the nations'' children' do
+    nation = Nation.create!(name: "Gahlland", landlocked: false, population: 324, national_language: "Gahlish")
+    nation2 = Nation.create!(name: "Bjornsval", landlocked: false, population: 212, national_language: "Bjornish")
+    ancestry = nation.ancestries.create!(name: "Elves", darkvision: false, population: 1500, patron_deity: "Faesren")
+    ancestry2 = nation.ancestries.create!(name: "Orcs", darkvision: true, population: 32000, patron_deity: "Orrug")
+    ancestry3 = nation2.ancestries.create!(name: "Dwarves", darkvision: true, population: 150000, patron_deity: "Dorfgunir")
+    visit "/nations/#{nation.id}"
+    save_and_open_page
+    expect(page).to have_text("Ancestry count: 2")
+    expect(page).to_not have_text("Ancestry count: 1")
   end
 end
