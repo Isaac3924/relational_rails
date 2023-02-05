@@ -59,7 +59,7 @@ RSpec.describe 'the ancestries index page' do
   end
 
   it 'has a link that leads to the parent index' do
-    visit "/nations"
+    visit "/ancestries"
 
     click_on "Nations Index"
     save_and_open_page
