@@ -15,7 +15,7 @@ RSpec.describe 'Nations index' do
 
   it 'shows all of the names of the nations by most recently created and shows when created next to it' do
     visit "/nations"
-    save_and_open_page
+    
     expect(page).to have_content(@nation.name)
     expect(page).to have_content(@nation2.name)
   end
