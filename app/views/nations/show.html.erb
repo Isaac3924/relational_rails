@@ -6,3 +6,4 @@
 <p>Created at: <%= @nation.created_at %></p>
 <p>Updated at: <%= @nation.updated_at %></p>
 <p>Ancestry count: <%= @ancestries_count %> </p>
+<%= link_to "Ancestries of #{@nation.name}", "/nations/#{@nation.id}/ancestries" %>

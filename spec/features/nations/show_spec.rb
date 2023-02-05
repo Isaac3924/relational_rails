@@ -65,4 +65,13 @@ RSpec.describe 'the nations show page' do
     click_on "Nations Index"
     expect(current_path).to eq ("/nations")
   end
+
+  it 'has a link that leads to the parent''s child_table_name page' do
+    nation = Nation.create!(name: "Gahlland", landlocked: false, population: 324, national_language: "Gahlish")
+    ancestry = nation.ancestries.create!(name: "Elves", darkvision: false, population: 1500, patron_deity: "Faesren")
+    visit "/nations/#{nation.id}"
+    save_and_open_page
+    click_on "Nations Index"
+    expect(current_path).to eq ("/nations/#{nation.id}/ancestries")
+  end
 end
