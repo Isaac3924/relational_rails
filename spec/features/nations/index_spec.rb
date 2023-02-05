@@ -15,7 +15,7 @@ RSpec.describe 'Nations index' do
 
   it 'shows all of the names of the nations by most recently created and shows when created next to it' do
     visit "/nations"
-    
+
     expect(page).to have_content(@nation.name)
     expect(page).to have_content(@nation2.name)
   end
@@ -23,8 +23,16 @@ RSpec.describe 'Nations index' do
   it 'has a link that leads to the child index' do
     visit "/nations"
 
-    click_on "Ancestries Index"
     save_and_open_page
+    click_on "Ancestries Index"
     expect(current_path).to eq ("/ancestries")
+  end
+
+  it 'has a link that leads to the parent index' do
+    visit "/nations"
+
+    save_and_open_page
+    click_on "Nations Index"
+    expect(current_path).to eq ("/nations")
   end
 end

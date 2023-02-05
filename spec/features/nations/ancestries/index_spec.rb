@@ -58,9 +58,16 @@ RSpec.describe 'Nations ancestries index' do
 
   it 'has a link that leads to the child index' do
     visit "/nations/#{@nation.id}/ancestries"
-    save_and_open_page
     click_on "Ancestries Index"
-    save_and_open_page
+
     expect(current_path).to eq ("/ancestries")
+  end
+
+  it 'has a link that leads to the parent index' do
+    visit "/nations/#{@nation.id}/ancestries"
+
+    save_and_open_page
+    click_on "Nations Index"
+    expect(current_path).to eq ("/nations")
   end
 end
