@@ -276,8 +276,8 @@
         "lines": [
           1,
           1,
-          2,
-          2,
+          1,
+          1,
           null,
           null,
           1,
@@ -312,8 +312,18 @@
           null,
           null
         ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nation_ancestries_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1675635949
+    "timestamp": 1675636208
   }
 }

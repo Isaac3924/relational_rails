@@ -71,7 +71,7 @@ RSpec.describe 'the nations show page' do
     ancestry = nation.ancestries.create!(name: "Elves", darkvision: false, population: 1500, patron_deity: "Faesren")
     visit "/nations/#{nation.id}"
     save_and_open_page
-    click_on "Nations Index"
+    click_on "Ancestries of #{nation.name}"
     expect(current_path).to eq ("/nations/#{nation.id}/ancestries")
   end
 end
