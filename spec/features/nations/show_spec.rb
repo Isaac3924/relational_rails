@@ -44,8 +44,17 @@ RSpec.describe 'the nations show page' do
     ancestry2 = nation.ancestries.create!(name: "Orcs", darkvision: true, population: 32000, patron_deity: "Orrug")
     ancestry3 = nation2.ancestries.create!(name: "Dwarves", darkvision: true, population: 150000, patron_deity: "Dorfgunir")
     visit "/nations/#{nation.id}"
-    save_and_open_page
+
     expect(page).to have_text("Ancestry count: 2")
     expect(page).to_not have_text("Ancestry count: 1")
+  end
+
+  it 'has a link that leads to the child index' do
+    nation = Nation.create!(name: "Gahlland", landlocked: false, population: 324, national_language: "Gahlish")
+    ancestry = nation.ancestries.create!(name: "Elves", darkvision: false, population: 1500, patron_deity: "Faesren")
+    visit "/nations/#{nation.id}"
+    click_on "Ancestries Index"
+    save_and_open_page
+    expect(current_path).to eq ("/ancestries")
   end
 end
