@@ -297,8 +297,23 @@
           1,
           null
         ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nations_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1675634305
+    "timestamp": 1675634524
   }
 }
