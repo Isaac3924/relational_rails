@@ -276,13 +276,13 @@
         "lines": [
           1,
           1,
-          0,
-          0,
+          3,
+          3,
           null,
           null,
           1,
-          5,
-          5,
+          0,
+          0,
           null,
           null
         ]
@@ -290,6 +290,19 @@
       "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/ancestries_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -301,6 +314,6 @@
         ]
       }
     },
-    "timestamp": 1675565832
+    "timestamp": 1675625019
   }
 }
