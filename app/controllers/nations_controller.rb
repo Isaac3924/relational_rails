@@ -27,6 +27,7 @@ class NationsController < ApplicationController
     redirect_to "/nations/#{nation.id}"
   end
 
+private
   def nation_params
     params.permit(:name, :landlocked, :population, :national_language)
   end
