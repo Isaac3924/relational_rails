@@ -9,13 +9,17 @@ class NationAncestriesController < ApplicationController
   end
 
   def create
-    nation = Nation.find(params[:nation_id])
-    ancestry = Ancestry.create(nation_params)
-    redirect_to "/nations/#{nation.id}/ancestries"
+    @nation = Nation.find(params[:nation_id])
+    ancestry = Ancestry.create!(ancestry_params)
+    redirect_to "/nations/#{@nation.id}/ancestries"
   end
 
 private
   def nation_params
     params.permit(:name, :landlocked, :population, :national_language)
+  end
+
+  def ancestry_params
+    params.permit(:name, :darkvision, :population, :patron_deity, :nation_id)
   end
 end

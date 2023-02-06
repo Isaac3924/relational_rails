@@ -36,8 +36,6 @@ RSpec.describe 'the Ancestry creation' do
     fill_in('Patron deity', with: 'Shrike')
     click_button('Create Ancestry')
     
-    new_ancestry_id = Ancestry.last.id
-    require 'pry'; binding.pry
     save_and_open_page
     expect(current_path).to eq("/nations/#{@nation.id}/ancestries")
     expect(page).to have_content("Zombies")
