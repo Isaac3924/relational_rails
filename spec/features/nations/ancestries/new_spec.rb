@@ -22,8 +22,9 @@ RSpec.describe 'the Ancestry creation' do
 
   it 'has a link to /nations/:nation_id/ancestries/new from the nations ancestries index page' do
     visit "/nations/#{@nation.id}/ancestries"
+    
     click_link "Create Ancestry"
-    save_and_open_page
+
     expect(current_path).to eq ("/nations/#{@nation.id}/ancestries/new")
   end
   
