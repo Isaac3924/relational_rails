@@ -13,7 +13,11 @@ class NationsController < ApplicationController
   end
 
   def create
-    nation = Nation.create(name: params[:name])
+    nation = Nation.create(nation_params)
     redirect_to "/nations"
+  end
+
+  def nation_params
+    params.permit(:name)
   end
 end
