@@ -18,28 +18,28 @@ RSpec.describe 'the Ancestry edit' do
     @ancestry2 = @nation2.ancestries.create!(name: "Orcs", darkvision: true, population: 32000, patron_deity: "Orrug")
   end
 
-  it 'has a link to nations/edit from the nations show page' do
+  it 'has a link to ancestries/edit from the ancestries show page' do
     visit "/ancestries/#{@ancestry.id}"
     click_link "Update #{@ancestry.name}"
-    save_and_open_page
+    
     expect(current_path).to eq ("/ancestries/#{@ancestry.id}/edit")
   end
     
-  # it 'can edit the nation' do
-  #   visit "/nations/#{@nation.id}"
+  it 'can edit the ancestor' do
+    visit "/ancestries/#{@ancestry.id}"
 
-  #   expect(page).to have_content('fixme')
+    expect(page).to have_content('Elves')
 
-  #   click_link "Update #{@nation.name}"
+    click_link "Update #{@ancestry.name}"
     
-  #   fill_in('Name', with: 'fixed')
-  #   fill_in('Landlocked', with: 'true')
-  #   fill_in('Population', with: '12341')
-  #   fill_in('National language', with: 'testish')
-  #   click_button('Update Nation')
-  #   save_and_open_page
+    fill_in('Name', with: 'Delves')
+    fill_in('Darkvision', with: 'true')
+    fill_in('Population', with: '500')
+    fill_in('Patron deity', with: 'Daesren')
+    click_button('Update Nation')
+    save_and_open_page
       
-  #   expect(current_path).to eq("/nations/#{@nation.id}")
-  #   expect(page).to have_content("fixed")
-  # end
+    expect(current_path).to eq("/nations/#{@nation.id}")
+    expect(page).to have_content("Delves")
+  end
 end
