@@ -1,0 +1,16 @@
+<h1>Make new Ancestry</h1>
+<%= form_with url: '/ancestries', method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :darkvision %>
+  <%= form.text_field :darkvision %>
+
+  <%= form.label :population %>
+  <%= form.text_field :population %>
+
+  <%= form.label :patron_deity %>
+  <%= form.text_field :patron_deity %>
+
+  <%= form.submit "Create Ancestry" %>
+<% end %>

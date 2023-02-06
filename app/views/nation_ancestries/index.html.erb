@@ -7,4 +7,5 @@
   <p>Nation ID:<%= ancestry.nation_id %></p>
   <p>Created at: <%= ancestry.created_at %></p>
   <p>Updated at: <%= ancestry.updated_at %></p>
-<% end %>
+  <% end %>
+  <%= link_to "Create Ancestry", "/nations/#{@nation.id}/ancestries/new" %>
