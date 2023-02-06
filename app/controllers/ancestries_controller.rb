@@ -6,4 +6,8 @@ class AncestriesController < ApplicationController
   def show
     @ancestry = Ancestry.find(params[:id])
   end
+
+  def edit
+    @ancestry = Ancestry.find(params[:id])
+  end
 end

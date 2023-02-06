@@ -1,4 +1,5 @@
 <h1><%= @ancestry.name %></h1>
+<%= link_to "Update #{@ancestry.name}", "/ancestries/#{@ancestry.id}/edit", method: :get %>
 <p>ID: <%= @ancestry.id %></p>
 <p>Darkvision: <%= @ancestry.darkvision %></p>
 <p>Population: <%= @ancestry.population %></p>

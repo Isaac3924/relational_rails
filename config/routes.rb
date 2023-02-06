@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/ancestries/:id', to: 'ancestries#show'
   get '/nations/:nation_id/ancestries', to: 'nation_ancestries#index'
   post '/nations', to: 'nations#create'
+  get '/ancestries/:id/edit', to: 'ancestries#edit'
   get '/nations/:id/edit', to: 'nations#edit'
   patch '/nations/:id', to: 'nations#update'
   get '/nations/:nation_id/ancestries/new', to: 'nation_ancestries#new'

@@ -10,7 +10,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'the Nation edit' do
+RSpec.describe 'the Ancestry edit' do
   before :each do
     @nation = Nation.create!(name: "Gahlland", landlocked: false, population: 324, national_language: "Gahlish")
     @nation2 = Nation.create!(name: "Bjornsval", landlocked: true, population: 212, national_language: "Bjornish")
@@ -20,8 +20,8 @@ RSpec.describe 'the Nation edit' do
 
   it 'has a link to nations/edit from the nations show page' do
     visit "/ancestries/#{@ancestry.id}"
-  
     click_link "Update #{@ancestry.name}"
+    save_and_open_page
     expect(current_path).to eq ("/ancestries/#{@ancestry.id}/edit")
   end
     
