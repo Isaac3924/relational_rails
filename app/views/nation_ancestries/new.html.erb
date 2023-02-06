@@ -1,5 +1,5 @@
 <h1>Make new Ancestry</h1>
-<%= form_with url: '/ancestries', method: :post, local: true do |form| %>
+<%= form_with url: "/nations/#{@nation.id}/ancestries", method: :post, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
 

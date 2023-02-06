@@ -27,18 +27,19 @@ RSpec.describe 'the Ancestry creation' do
     expect(current_path).to eq ("/nations/#{@nation.id}/ancestries/new")
   end
   
-  # it 'can create new nation' do
-  #   visit '/nations/new'
+  it 'can create new child' do
+    visit "/nations/#{@nation.id}/ancestries/new"
     
-  #   fill_in('Name', with: 'test')
-  #   fill_in('Landlocked', with: 'true')
-  #   fill_in('Population', with: '12341')
-  #   fill_in('National language', with: 'testish')
-  #   click_button('Create Nation')
+    fill_in('Name', with: 'Zombies')
+    fill_in('Darkvision', with: 'true')
+    fill_in('Population', with: '470823326')
+    fill_in('Patron deity', with: 'Shrike')
+    click_button('Create Ancestry')
     
-  #   new_nation_id = Nation.last.id
-  #   save_and_open_page
-  #   expect(current_path).to eq("/nations")
-  #   expect(page).to have_content("test: #{Nation.last.created_at}")
-  # end
+    new_ancestry_id = Ancestry.last.id
+    require 'pry'; binding.pry
+    save_and_open_page
+    expect(current_path).to eq("/nations/#{@nation.id}/ancestries")
+    expect(page).to have_content("Zombies")
+  end
 end

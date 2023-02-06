@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get '/nations/:id/edit', to: 'nations#edit'
   patch '/nations/:id', to: 'nations#update'
   get '/nations/:nation_id/ancestries/new', to: 'nation_ancestries#new'
-  post '/ancestries', to: 'ancestries#create'
+  post '/nations/:nation_id/ancestries', to: 'nation_ancestries#create'
 end
