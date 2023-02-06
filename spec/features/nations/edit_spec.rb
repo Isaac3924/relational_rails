@@ -19,6 +19,7 @@ RSpec.describe 'the Nation edit' do
   it 'has a link to nations/edit from the nations show page' do
     visit "/nations/#{@nation.id}"
   
+    save_and_open_page
     click_link "Update #{@nation.name}"
     expect(current_path).to eq ("/nations/#{@nation.id}/edit")
   end

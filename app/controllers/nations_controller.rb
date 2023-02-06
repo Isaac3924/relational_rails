@@ -16,8 +16,13 @@ class NationsController < ApplicationController
     nation = Nation.create(nation_params)
     redirect_to "/nations"
   end
+  
+  def edit
+
+  end
 
   def nation_params
     params.permit(:name, :landlocked, :population, :national_language)
   end
+
 end
