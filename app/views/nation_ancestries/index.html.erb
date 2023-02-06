@@ -1,3 +1,4 @@
+<%= link_to "Sort Alphabetically" %>
 <% @ancestries.each do |ancestry| %>
   <h3><%= ancestry.name %></h3>
   <p>ID: <%= ancestry.id %></p>
@@ -7,5 +8,5 @@
   <p>Nation ID:<%= ancestry.nation_id %></p>
   <p>Created at: <%= ancestry.created_at %></p>
   <p>Updated at: <%= ancestry.updated_at %></p>
-  <% end %>
-  <%= link_to "Create Ancestry", "/nations/#{@nation.id}/ancestries/new" %>
+<% end %>
+<%= link_to "Create Ancestry", "/nations/#{@nation.id}/ancestries/new" %>
