@@ -36,10 +36,10 @@ RSpec.describe 'the Ancestry edit' do
     fill_in('Darkvision', with: 'true')
     fill_in('Population', with: '500')
     fill_in('Patron deity', with: 'Daesren')
-    click_button('Update Nation')
+    click_button('Update Ancestry')
     save_and_open_page
       
-    expect(current_path).to eq("/nations/#{@nation.id}")
+    expect(current_path).to eq("/ancestries/#{@ancestry.id}")
     expect(page).to have_content("Delves")
   end
 end
