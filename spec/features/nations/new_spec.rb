@@ -15,8 +15,19 @@ RSpec.describe 'the Nation creation' do
   it 'has a link to nations/new from the nations index page' do
     visit "/nations"
 
-    save_and_open_page
-    click_on "New Nation"
+    click_link "New Nation"
     expect(current_path).to eq ("/nations/new")
+  end
+  
+  it 'can create new nation' do
+    visit '/nations/new'
+    
+    fill_in('Name', with: 'test')
+    click_button('Create Nation')
+    
+    new_nation_id = Nation.last.id
+    save_and_open_page
+    expect(current_path).to eq("/nations")
+    expect(page).to have_content("test: #{Nation.last.created_at}")
   end
 end

@@ -1,2 +1,7 @@
 <h1>Make new Nation</h1>
-<p>placeholder</p>
+<%= form_with url: '/nations', method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.submit "Create Nation" %>
+<% end %>

@@ -10,6 +10,10 @@ class NationsController < ApplicationController
   end
 
   def new
-    @nations = Nation.all
+  end
+
+  def create
+    nation = Nation.create(name: params[:name])
+    redirect_to "/nations"
   end
 end
