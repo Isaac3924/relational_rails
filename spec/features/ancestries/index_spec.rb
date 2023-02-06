@@ -11,42 +11,42 @@ RSpec.describe 'the ancestries index page' do
   it 'displays all ancestries names' do
     visit "/ancestries"
 
-    expect(page).to have_content(@ancestry.name)
+    expect(page).to_not have_content(@ancestry.name)
     expect(page).to have_content(@ancestry2.name)
   end
 
   it 'displays the ancestries ID' do
     visit "/ancestries"
 
-    expect(page).to have_content(@ancestry.id)
+    expect(page).to_not have_content(@ancestry.id)
     expect(page).to have_content(@ancestry2.id)
   end
 
   it 'displays the ancestries darkvision boolean' do
     visit "/ancestries"
 
-    expect(page).to have_content(@ancestry.darkvision)
+    expect(page).to_not have_content(@ancestry.darkvision)
     expect(page).to have_content(@ancestry2.darkvision)
   end
 
   it 'displays the ancestries population' do
     visit "/ancestries"
 
-    expect(page).to have_content(@ancestry.population)
+    expect(page).to_not have_content(@ancestry.population)
     expect(page).to have_content(@ancestry2.population)
   end
 
   it 'displays the ancestries patron deity' do
     visit "/ancestries"
 
-    expect(page).to have_content(@ancestry.patron_deity)
+    expect(page).to_not have_content(@ancestry.patron_deity)
     expect(page).to have_content(@ancestry2.patron_deity)
   end
 
   it 'displays the ancestries nation ID' do
     visit "/ancestries"
 
-    expect(page).to have_content(@ancestry.nation_id)
+    expect(page).to_not have_content(@ancestry.nation_id)
     expect(page).to have_content(@ancestry2.nation_id)
   end
 

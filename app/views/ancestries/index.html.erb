@@ -1,11 +1,13 @@
 <h1>Ancestries</h1>
 <% @ancestries.each do |ancestry| %>
-  <h3><%= ancestry.name %></h3>
-  <p>ID: <%= ancestry.id %></p>
-  <p>Darkvision: <%= ancestry.darkvision %></p>
-  <p>Population: <%= ancestry.population %></p>
-  <p>Patron Deity: <%= ancestry.patron_deity %></p>
-  <p>Nation ID:<%= ancestry.nation_id %></p>
-  <p>Created at: <%= ancestry.created_at %></p>
-  <p>Updated at: <%= ancestry.updated_at %></p>
+  <% if ancestry.darkvision %>
+    <h3><%= ancestry.name %></h3>
+    <p>ID: <%= ancestry.id %></p>
+    <p>Darkvision: <%= ancestry.darkvision %></p>
+    <p>Population: <%= ancestry.population %></p>
+    <p>Patron Deity: <%= ancestry.patron_deity %></p>
+    <p>Nation ID:<%= ancestry.nation_id %></p>
+    <p>Created at: <%= ancestry.created_at %></p>
+    <p>Updated at: <%= ancestry.updated_at %></p>
+  <% end %>
 <% end %>
