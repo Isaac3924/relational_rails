@@ -23,6 +23,9 @@ RSpec.describe 'the Nation creation' do
     visit '/nations/new'
     
     fill_in('Name', with: 'test')
+    fill_in('Landlocked', with: 'true')
+    fill_in('Population', with: '12341')
+    fill_in('National language', with: 'testish')
     click_button('Create Nation')
     
     new_nation_id = Nation.last.id
