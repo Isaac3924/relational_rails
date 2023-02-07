@@ -30,7 +30,6 @@ RSpec.describe 'Nations index' do
 
   it 'has a link that leads to the parent index' do
     visit "/nations"
-
     
     click_on "Nations Index"
     expect(current_path).to eq ("/nations")

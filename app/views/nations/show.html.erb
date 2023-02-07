@@ -1,5 +1,6 @@
 <h1><%= @nation.name %></h1>
 <%= link_to "Update #{@nation.name}", "/nations/#{@nation.id}/edit", method: :get %>
+<%= link_to "Delete #{@nation.name}", "/nations/#{@nation.id}/edit", method: :get %>
 <p>ID: <%= @nation.id %></p>
 <p>Landlocked: <%= @nation.landlocked %></p>
 <p>Population: <%= @nation.population %></p>
