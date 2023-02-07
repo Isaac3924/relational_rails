@@ -22,7 +22,7 @@ class NationAncestriesController < ApplicationController
   def filter
     @nation = Nation.find(params[:nation_id])
     @ancestries = @nation.ancestries.filter_ancestries(params[:input])
-    render 'index'
+    redirect_to "/nations/#{@nation.id}/ancestries"
   end
 
 private

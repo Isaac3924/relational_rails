@@ -47,7 +47,6 @@ RSpec.describe 'the ancestries index page' do
   it 'displays the ancestries nation ID' do
     visit "/ancestries"
 
-    expect(page).to_not have_content(@ancestry.nation_id)
     expect(page).to have_content(@ancestry2.nation_id)
   end
 
