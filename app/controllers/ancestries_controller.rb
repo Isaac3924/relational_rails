@@ -17,6 +17,12 @@ class AncestriesController < ApplicationController
     redirect_to "/ancestries/#{ancestry.id}"
   end
 
+  def destroy
+    ancestry = Ancestry.find(params[:id])
+    ancestry.destroy
+    redirect_to "/ancestries"
+  end
+
 private
   def ancestry_params
     params.permit(:name, :darkvision, :population, :patron_deity, :nation_id)

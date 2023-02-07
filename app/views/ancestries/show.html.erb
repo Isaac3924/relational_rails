@@ -1,6 +1,6 @@
 <h1><%= @ancestry.name %></h1>
 <%= link_to "Update #{@ancestry.name}", "/ancestries/#{@ancestry.id}/edit", method: :get %>
-<%= link_to "Delete #{@ancestry.name}", "/nations/#{@ancestry.id}", method: :delete %>
+<%= link_to "Delete #{@ancestry.name}", "/ancestries/#{@ancestry.id}", method: :delete %>
 <p>ID: <%= @ancestry.id %></p>
 <p>Darkvision: <%= @ancestry.darkvision %></p>
 <p>Population: <%= @ancestry.population %></p>

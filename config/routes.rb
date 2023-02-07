@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   patch '/ancestries/:id', to: 'ancestries#update'
   get '/nations/:nation_id/ancestries/alphabetical_index', to: 'nation_ancestries#alphabetical_index'
   delete 'nations/:id', to: 'nations#destroy'
+  delete 'ancestries/:id', to: 'ancestries#destroy'
 end
