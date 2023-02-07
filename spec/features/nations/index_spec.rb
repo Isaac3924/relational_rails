@@ -31,8 +31,16 @@ RSpec.describe 'Nations index' do
   it 'has a link that leads to the parent index' do
     visit "/nations"
 
-    save_and_open_page
+    
     click_on "Nations Index"
     expect(current_path).to eq ("/nations")
+  end
+
+  it 'has a link that leads to the nations edit page' do
+    visit "/nations"
+
+    save_and_open_page
+    click_on "Update #{@nation.name}"
+    expect(current_path).to eq ("/nations/#{@nation.id}/edit")
   end
 end
