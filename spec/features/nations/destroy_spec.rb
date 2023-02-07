@@ -51,29 +51,27 @@ RSpec.describe 'destroying a nation (which sounds METAL)' do
   it 'has links indicating deletion on index page' do
     visit "/nations"
     
-    save_and_open_page
     expect(page).to have_content("Delete #{@nation.name}")
     expect(page).to have_content("Delete #{@nation2.name}")
   end
     
-  it 'can destroy the nation' do
-    visit "/nations/#{@nation.id}"
+  it 'can destroy the nation from the index' do
+    visit "/nations"
 
     expect(page).to have_content('delete_me')
 
     click_link "Delete #{@nation.name}"
-    save_and_open_page
       
     expect(current_path).to eq("/nations")
     expect(page).to have_content("delete_me")
   end
 
-  it 'can destroy the ancestries' do
+  it 'can destroy the ancestries the nation index' do
     visit "/ancestries"
     expect(page).to have_content('Destroy')
     expect(page).to have_content('Destroy2')
 
-    visit "/nations/#{@nation.id}"
+    visit "/nations"
     click_link "Delete #{@nation.name}"
     visit "/ancestries"
     save_and_open_page

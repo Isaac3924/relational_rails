@@ -27,6 +27,25 @@ RSpec.describe 'destroying an ancestry (also sounds METAL)' do
     expect(page).to have_content('Destroy1')
 
     click_link "Delete #{@ancestry.name}"
+      
+    expect(current_path).to eq("/ancestries")
+    expect(page).to_not have_content("Destroy1")
+    expect(page).to have_content("Destroy2")
+  end
+
+  it 'has links indicating deletion on index page' do
+    visit "/ancestries"
+    
+    expect(page).to have_content("Delete #{@ancestry.name}")
+    expect(page).to have_content("Delete #{@ancestry2.name}")
+  end
+    
+  it 'can destroy the ancestor from the index page' do
+    visit "/ancestries"
+
+    expect(page).to have_content('Destroy1')
+
+    click_link "Delete #{@ancestry.name}"
     save_and_open_page
       
     expect(current_path).to eq("/ancestries")
