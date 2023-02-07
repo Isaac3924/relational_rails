@@ -56,30 +56,30 @@ RSpec.describe 'destroying a nation (which sounds METAL)' do
     expect(page).to have_content("Delete #{@nation2.name}")
   end
     
-  # it 'can destroy the nation' do
-  #   visit "/nations/#{@nation.id}"
+  it 'can destroy the nation' do
+    visit "/nations/#{@nation.id}"
 
-  #   expect(page).to have_content('delete_me')
+    expect(page).to have_content('delete_me')
 
-  #   click_link "Delete #{@nation.name}"
-  #   save_and_open_page
+    click_link "Delete #{@nation.name}"
+    save_and_open_page
       
-  #   expect(current_path).to eq("/nations")
-  #   expect(page).to_not have_content("delete_me")
-  # end
+    expect(current_path).to eq("/nations")
+    expect(page).to have_content("delete_me")
+  end
 
-  # it 'can destroy the ancestries' do
-  #   visit "/ancestries"
-  #   expect(page).to have_content('Destroy')
-  #   expect(page).to have_content('Destroy2')
+  it 'can destroy the ancestries' do
+    visit "/ancestries"
+    expect(page).to have_content('Destroy')
+    expect(page).to have_content('Destroy2')
 
-  #   visit "/nations/#{@nation.id}"
-  #   click_link "Delete #{@nation.name}"
-  #   visit "/ancestries"
-  #   save_and_open_page
+    visit "/nations/#{@nation.id}"
+    click_link "Delete #{@nation.name}"
+    visit "/ancestries"
+    save_and_open_page
       
-  #   expect(current_path).to eq("/ancestries")
-  #   expect(page).to_not have_content("Destroy")
-  #   expect(page).to_not have_content("Destroy2")
-  # end
+    expect(current_path).to eq("/ancestries")
+    expect(page).to_not have_content("Destroy1")
+    expect(page).to_not have_content("Destroy2")
+  end
 end
