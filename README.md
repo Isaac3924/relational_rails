@@ -11,17 +11,17 @@ My Schema Diagram:
 
 ![My_Diagram](relational_rails_schema.png)
 
-* Ruby version
+* Ruby version: 
 2.7.4
 
-* System dependencies
+* System dependencies: 
 Rails 5.2.8.1
 
-* Database creation
+* Database creation: 
 Run 'rails db:create'
 
-* Database initialization
+* Database initialization: 
 Run 'rails db:{drop,create,migrate,seed}'
 
-* How to run the test suite
+* How to run the test suite: 
 Run 'bundle exec rspec'
