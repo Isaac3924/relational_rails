@@ -79,4 +79,26 @@ RSpec.describe 'Nations ancestries index' do
     expect(current_path).to eq ("/nations/#{@nation2.id}/ancestries/alphabetical_index")
     expect("Alfs").to appear_before("Dwarves")
   end
+
+  it 'has links to edit ancestries' do
+    visit "/nations/#{@nation.id}/ancestries"
+
+    expect(page).to have_content("Update #{@ancestry.name}")
+    expect(page).to have_content("Update #{@ancestry2.name}")
+  end
+
+  it 'has link that leads to update page' do
+    visit "/nations/#{@nation.id}/ancestries"
+
+    click_link "Update #{@ancestry.name}"
+    expect(current_path).to eq ("/ancestries/#{@ancestry.id}/edit")
+  end
+
+  it 'has link that leads to update page' do
+    visit "/nations/#{@nation2.id}/ancestries/alphabetical_index"
+
+    click_link "Update #{@ancestry3.name}"
+    save_and_open_page
+    expect(current_path).to eq ("/ancestries/#{@ancestry3.id}/edit")
+  end
 end

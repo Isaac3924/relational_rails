@@ -284,23 +284,20 @@
           1,
           1,
           null,
-          1,
+          2,
           null
         ]
       },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/ancestries_controller.rb": {
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nation_ancestries_controller.rb": {
         "lines": [
           1,
           1,
-          1,
-          null,
-          null,
-          1,
+          0,
           0,
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           1,
@@ -310,6 +307,15 @@
           null,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
           1,
           0,
           null,
@@ -321,8 +327,36 @@
           1,
           null
         ]
+      },
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/ancestries_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1675786801
+    "timestamp": 1675787764
   }
 }
