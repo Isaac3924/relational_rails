@@ -1,5 +1,5 @@
 <h1>Nations</h1>
 <%= link_to "New Nation", "/nations/new" %>
 <% @nations.each do |nation| %>
-  <p><%= nation.name %>: <%= nation.created_at %> <%= link_to "Update #{nation.name}", "/nations/#{nation.id}/edit" %></p>
+  <p><%= nation.name %>: <%= nation.created_at %> <%= link_to "Update #{nation.name}", "/nations/#{nation.id}/edit" %> | <%= link_to "Delete #{nation.name}", "/nations/#{nation.id}", method: :delete %></p>
 <% end %>
