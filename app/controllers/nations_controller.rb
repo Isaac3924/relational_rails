@@ -27,6 +27,12 @@ class NationsController < ApplicationController
     redirect_to "/nations/#{nation.id}"
   end
 
+  def destroy
+    nation = Nation.find(params[:id])
+    nation.destroy
+    redirect_to '/nations'
+  end
+
 private
   def nation_params
     params.permit(:name, :landlocked, :population, :national_language)

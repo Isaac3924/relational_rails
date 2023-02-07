@@ -256,6 +256,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -279,45 +280,47 @@
           null
         ]
       },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/models/ancestry.rb": {
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nations_controller.rb": {
         "lines": [
           1,
           1,
+          1,
+          1,
           null,
+          null,
+          1,
           2,
-          null
-        ]
-      },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/nation_ancestries_controller.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          0,
+          2,
           null,
           null,
           1,
-          0,
           null,
           null,
           1,
           0,
           0,
-          0,
           null,
           null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
           1,
           0,
           null,
           null,
           1,
           0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
           null,
           null
         ]
@@ -328,35 +331,16 @@
           null
         ]
       },
-      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/controllers/ancestries_controller.rb": {
+      "/Users/isaacalter/Desktop/turing_work/2mod/projects/relational_rails/app/models/ancestry.rb": {
         "lines": [
           1,
           1,
-          0,
-          null,
           null,
           1,
-          0,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1675787764
+    "timestamp": 1675789636
   }
 }

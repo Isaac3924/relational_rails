@@ -19,15 +19,15 @@ RSpec.describe 'destroying a nation (which sounds METAL)' do
     expect(page).to have_content("Delete #{@nation.name}")
   end
     
-#   it 'can destroy the nation' do
-#     visit "/nations/#{@nation.id}"
+  it 'can destroy the nation' do
+    visit "/nations/#{@nation.id}"
 
-#     expect(page).to have_content('delete_me')
+    expect(page).to have_content('delete_me')
 
-#     click_link "Delete #{@nation.name}"
-#     save_and_open_page
+    click_link "Delete #{@nation.name}"
+    save_and_open_page
       
-#     expect(current_path).to eq("/nations")
-#     expect(page).to_not have_content("delete_me")
-#   end
+    expect(current_path).to eq("/nations")
+    expect(page).to_not have_content("delete_me")
+  end
 end
