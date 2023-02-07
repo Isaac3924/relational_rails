@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/nations/:nation_id/ancestries/new', to: 'nation_ancestries#new'
   post '/nations/:nation_id/ancestries', to: 'nation_ancestries#create'
   patch '/ancestries/:id', to: 'ancestries#update'
+  get '/nations/:nation_id/ancestries/alphabetical_index', to: 'nation_ancestries#alphabetical_index'
 end

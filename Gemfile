@@ -42,6 +42,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'capybara'
   gem 'launchy' # save_and_open_page
+  gem 'orderly' #appear_before
 end
 
 group :development do

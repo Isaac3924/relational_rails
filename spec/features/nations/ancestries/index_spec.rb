@@ -7,6 +7,7 @@ RSpec.describe 'Nations ancestries index' do
     @ancestry = @nation.ancestries.create!(name: "Elves", darkvision: false, population: 1500, patron_deity: "Faesren")
     @ancestry2 = @nation.ancestries.create!(name: "Orcs", darkvision: true, population: 32000, patron_deity: "Orrug")
     @ancestry3 = @nation2.ancestries.create!(name: "Dwarves", darkvision: true, population: 150000, patron_deity: "Dorfgunir")
+    @ancestry4 = @nation2.ancestries.create!(name: "Alfs", darkvision: true, population: 1500, patron_deity: "Alfan")
   end
 
   it 'shows all of the names of the ancestries for the nation' do
@@ -70,11 +71,12 @@ RSpec.describe 'Nations ancestries index' do
     expect(current_path).to eq ("/nations")
   end
 
-  it 'has a link that does not lead to another page' do
-    visit "/nations/#{@nation.id}/ancestries"
+  it 'has a link that leads to a page with ancestors sorted alphabetically' do
+    visit "/nations/#{@nation2.id}/ancestries"
 
     click_on "Sort Alphabetically"
     save_and_open_page
-    expect(current_path).to eq ("/nations/#{@nation.id}/ancestries")
+    expect(current_path).to eq ("/nations/#{@nation2.id}/ancestries/alphabetical_index")
+    expect("Alfs").to appear_before("Dwarves")
   end
 end
