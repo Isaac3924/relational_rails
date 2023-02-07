@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get '/nations/:nation_id/ancestries/alphabetical_index', to: 'nation_ancestries#alphabetical_index'
   delete 'nations/:id', to: 'nations#destroy'
   delete 'ancestries/:id', to: 'ancestries#destroy'
+  get 'nations/:nation_id/ancestries/filter', to: 'nation_ancestries#filter'
 end

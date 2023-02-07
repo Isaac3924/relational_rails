@@ -98,7 +98,18 @@ RSpec.describe 'Nations ancestries index' do
     visit "/nations/#{@nation2.id}/ancestries/alphabetical_index"
 
     click_link "Update #{@ancestry3.name}"
-    save_and_open_page
     expect(current_path).to eq ("/ancestries/#{@ancestry3.id}/edit")
+  end
+  
+  it 'has a form that will return to this index that will display ancestries that have a greater ammount of number than input' do
+		visit "/nations/#{@nation.id}/ancestries"
+    
+    fill_in('Input', with: 300)
+    
+    save_and_open_page
+    expect(current_path).to eq ("/nations/#{@nation.id}/ancestries")
+    expect(page).to have_content(@ancestry.name)
+    expect(page).to have_content(@ancestry2.name)
+    expect(page).to_not have_content(@ancestry3.name)
   end
 end

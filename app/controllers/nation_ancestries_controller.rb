@@ -19,6 +19,12 @@ class NationAncestriesController < ApplicationController
     @ancestries = @nation.ancestries
   end
 
+  def filter
+    @nation = Nation.find(params[:nation_id])
+    @ancestries = @nation.ancestries.filter_ancestries(params[:input])
+    render 'index'
+  end
+
 private
   def nation_params
     params.permit(:name, :landlocked, :population, :national_language)
