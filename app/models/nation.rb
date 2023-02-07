@@ -1,3 +1,3 @@
 class Nation < ApplicationRecord
-  has_many :ancestries
+  has_many :ancestries, dependent: :destroy
 end
