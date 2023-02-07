@@ -2,6 +2,7 @@
 <% @ancestries.each do |ancestry| %>
   <% if ancestry.darkvision %>
     <h3><%= ancestry.name %></h3>
+    <p><%= link_to "Update #{ancestry.name}", "/ancestries/#{ancestry.id}/edit" %></p>
     <p>ID: <%= ancestry.id %></p>
     <p>Darkvision: <%= ancestry.darkvision %></p>
     <p>Population: <%= ancestry.population %></p>
