@@ -5,7 +5,7 @@
 1. navigate to http://localhost:3000/ancestries or http://localhost:3000/nations
 1. navigate thru the site as wanted/needed to see site features.
 1. When you want to shut off the server hit 'control + c'
-1. Run 'bundle exec rspec for coverage if needed/wanted. It will open tabs showcasing some pages.'
+1. Run 'bundle exec rspec' for coverage/testing if needed/wanted. It will open tabs showcasing some pages.'
 
 My Schema Diagram:
 
